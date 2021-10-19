@@ -38,3 +38,7 @@
 /home/abdu/repos/asp-porojects/project1/BooksApi/obj/Debug/net5.0/ref/BooksApi.dll
 /home/abdu/repos/asp-porojects/project1/BooksApi/obj/Debug/net5.0/BooksApi.pdb
 /home/abdu/repos/asp-porojects/project1/BooksApi/obj/Debug/net5.0/BooksApi.genruntimeconfig.cache
+/home/abdu/repos/asp-porojects/project1/BooksApi/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
+/home/abdu/repos/asp-porojects/project1/BooksApi/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/home/abdu/repos/asp-porojects/project1/BooksApi/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/abdu/repos/asp-porojects/project1/BooksApi/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
