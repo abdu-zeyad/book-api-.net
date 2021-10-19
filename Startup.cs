@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using BooksApi.Models;
+using BooksApi.Services;
+using Microsoft.Extensions.Options;
 
 namespace BooksApi
 {
@@ -26,12 +29,16 @@ namespace BooksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<BookstoreDatabaseSettings>(
+                Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
+
+            services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
+
+            services.AddSingleton<BookService>();
+            services.AddSwaggerGen();
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BooksApi", Version = "v1" });
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
